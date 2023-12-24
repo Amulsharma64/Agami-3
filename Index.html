@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- What are some best practices for writing clean and maintainable code in JavaScript? -->
+    <script>
+        // 1. Use meaningful and pronounceable variable names
+         
+            // Bad
+            let loading = true
+
+            // Good
+            let isLoading = true
+
+        // 2. 2. Use naming conventions using camelCase
+            
+            //bad code
+             const personname = "John Doe"
+
+            //good code
+            const personName = "John Doe"
+        
+        // 3.  Use Functions for Splitting Code
+            // Without using functions
+            let numbers = [1, 2, 3, 4, 5];
+            let sum = 0;
+            for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+            }
+            console.log(sum);
+
+            // Using functions
+            function calculateSum(numbers) {
+            let sum = 0;
+            for (let i = 0; i < numbers.length; i++) {
+                sum += numbers[i];
+            }
+            return sum;
+            }
+            let numbers = [1, 2, 3, 4, 5];
+            console.log(calculateSum(numbers));
+       
+        // 4. Send Arguments as Object
+            // Without using objects
+            function createUser(name, email, age) {
+            // ...
+            }
+
+            createUser("John Doe", "johndoe@example.com", 30);
+
+            // Using objects
+            function createUser(user) {
+            // ...
+            }
+
+            createUser({
+            name: "John Doe",
+            email: "johndoe@example.com",
+            age: 30,
+            });
+
+        // 5. Avoid Mental Mapping
+        // Bad
+        const locations = ['Austin', 'New York', 'San Francisco'];
+        locations.forEach((l) => {
+            doStuff();
+            doSomeOtherStuff();
+            // ...
+            // ...
+            // ...
+            // Wait, what is `l` for again?
+            dispatch(l);
+        });
+        // 6. Use Descriptive Comments: Add comments to explain complex logic, algorithms, or areas of the code that might be 
+        // confusing to other developers.
+    </script>
+</body>
+</html>
